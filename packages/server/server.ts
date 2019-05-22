@@ -1,15 +1,29 @@
 import * as express from 'express';
+import { createConnection } from 'typeorm';
+
+import { handler } from './handlers';
 
 const app = express();
+
 const PORT = 3001;
 
-// Parse data to json
+// Parse body as a json
 app.use(express.json());
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-});
+(async () => {
+  const connection = await createConnection({
+    type: 'mysql',
+    host: 'localhost',
+    port: 3306,
+    username: 'localuser',
+    password: 'localpass',
+    database: 'local',
+    entities: ['entities/*'],
+  });
 
-app.get('/', (req, res) => {
-  res.send('Hallo Welt');
-});
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}`);
+  });
+})();
+
+app.use('/api', handler);
