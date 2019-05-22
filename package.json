@@ -1,0 +1,14 @@
+{
+  "name": "liquid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/yikeda6616/liquid",
+  "author": "Yasushi Ikeda <yikeda6616@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
