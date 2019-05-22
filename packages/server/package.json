@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "script": {
+  "scripts": {
     "start": "nodemon --ext ts -r source-map-support/register --exec ts-node server.ts",
     "typeorm": "ts-node ./node_modules/.bin/typeorm --config ormconfig"
   },
