@@ -10,10 +10,16 @@ export class Product1558912546337 implements MigrationInterface {
             name: 'id',
             type: 'int',
             isPrimary: true,
+            isGenerated: true,
+            generationStrategy: 'increment',
           },
           {
             name: 'name',
             type: 'varchar',
+          },
+          {
+            name: 'price',
+            type: 'int',
           },
           {
             name: 'description',
@@ -24,7 +30,7 @@ export class Product1558912546337 implements MigrationInterface {
             type: 'int',
           },
           {
-            name: 'quantity',
+            name: 'stock',
             type: 'int',
           },
           {
@@ -36,14 +42,6 @@ export class Product1558912546337 implements MigrationInterface {
             type: 'date',
           },
         ],
-      }),
-    );
-
-    await queryRunner.addColumn(
-      'product',
-      new TableColumn({
-        name: 'price',
-        type: 'int',
       }),
     );
   }

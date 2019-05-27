@@ -18,6 +18,9 @@ export class Product {
   productStatusId: number;
 
   @Column()
+  stock: number;
+
+  @Column()
   createdAt: Date;
 
   @Column()
