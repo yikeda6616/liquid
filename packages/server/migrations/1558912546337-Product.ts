@@ -35,11 +35,11 @@ export class Product1558912546337 implements MigrationInterface {
           },
           {
             name: 'createdAt',
-            type: 'date',
+            type: 'datetime',
           },
           {
             name: 'updatedAt',
-            type: 'date',
+            type: 'datetime',
           },
         ],
       }),
