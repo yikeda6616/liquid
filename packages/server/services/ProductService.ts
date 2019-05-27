@@ -6,7 +6,7 @@ export class ProductService {
     await ProductRepository.create(product);
   }
 
-  static async get(product: Product) {
-    return await ProductRepository.get(product.id);
+  static async get(pid) {
+    return await ProductRepository.get(pid);
   }
 }

@@ -13,6 +13,10 @@ interface CreateRequest {
   stock: number;
 }
 
+interface GetRequest {
+  pid: number;
+}
+
 class ProductHandler {
   @Post('/product')
   static async create(params: CreateRequest) {
@@ -28,8 +32,8 @@ class ProductHandler {
     await ProductService.create(product);
   }
 
-  @Get('/product')
-  static async get(product: Product) {
-    return await ProductService.get(product);
+  @Get('/product/:pid')
+  static async get(params: GetRequest) {
+    return await ProductService.get(params.pid);
   }
 }
