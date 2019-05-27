@@ -27,3 +27,5 @@ export const Put = createMethod('put');
 export const Delete = createMethod('delete');
 
 import './UserHandler';
+import './ProductHandler';
+import './OrderHandler';
