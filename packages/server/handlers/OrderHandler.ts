@@ -12,7 +12,7 @@ class OrderHandler {
   }
 
   @Get('/order')
-  static async get() {
-    return await OrderService.get(1);
+  static async get(oid: string) {
+    return await OrderService.get(oid);
   }
 }
