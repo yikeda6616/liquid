@@ -1,4 +1,4 @@
-import { Entity, Column, Timestamp } from 'typeorm';
+import { Entity, Column } from 'typeorm';
 
 @Entity()
 export class ProductCategory {
@@ -6,6 +6,6 @@ export class ProductCategory {
   pid: number;
   id: number;
   name: string;
-  createdAt: Timestamp;
-  updatedAt: Timestamp;
+  createdAt: Date;
+  updatedAt: Date;
 }

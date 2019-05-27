@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, Timestamp } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
 export class Product {
@@ -15,8 +15,8 @@ export class Product {
   productStatusId: number;
 
   @Column()
-  createdAt: Timestamp;
+  createdAt: Date;
 
   @Column()
-  updatedAt: Timestamp;
+  updatedAt: Date;
 }
