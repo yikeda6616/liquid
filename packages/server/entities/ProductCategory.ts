@@ -4,7 +4,8 @@ import { Entity, Column, Timestamp } from 'typeorm';
 export class ProductCategory {
   @Column()
   pid: number;
-  cid: number;
+  id: number;
+  name: string;
   createdAt: Timestamp;
   updatedAt: Timestamp;
 }
