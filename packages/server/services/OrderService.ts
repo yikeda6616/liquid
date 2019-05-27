@@ -6,7 +6,7 @@ export class OrderService {
     await OrderRepository.create(order);
   }
 
-  static async get(order: Order) {
-    return await OrderRepository.get(order.oid);
+  static async get(oid: string) {
+    return await OrderRepository.get(oid);
   }
 }
