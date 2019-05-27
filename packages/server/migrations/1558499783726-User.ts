@@ -29,5 +29,5 @@ export class User1558499783726 implements MigrationInterface {
  * SQLを書くことなくTypeScriptでDB内にテーブルを作成する
  * Data-MapperがTypeScriptをSQLに変換するため
  * 変換元となるTypeScriptで書かれた命令文を、マイグレーションファイルに記載する
- *
+ * https://typeorm.io/#/active-record-data-mapper
  */
