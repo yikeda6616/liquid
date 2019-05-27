@@ -12,6 +12,7 @@ class ProductHandler {
   static async create(params: CreateRequest) {
     const product = new Product();
     product.name = params.name;
+    product.price = params.price;
     await ProductService.create(product);
   }
 

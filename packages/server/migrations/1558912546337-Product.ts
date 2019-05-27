@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner, Table } from 'typeorm';
+import { MigrationInterface, QueryRunner, Table, TableColumn } from 'typeorm';
 
 export class Product1558912546337 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
@@ -36,6 +36,14 @@ export class Product1558912546337 implements MigrationInterface {
             type: 'date',
           },
         ],
+      }),
+    );
+
+    await queryRunner.addColumn(
+      'product',
+      new TableColumn({
+        name: 'price',
+        type: 'int',
       }),
     );
   }
