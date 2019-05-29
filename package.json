@@ -30,6 +30,9 @@
   "workspaces": {
     "packages": [
       "packages/*"
+    ],
+    "nohoist": [
+      "*/web/*"
     ]
   }
 }
