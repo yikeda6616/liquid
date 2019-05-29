@@ -1,3 +1,3 @@
 export * from './UserRepository';
-export * from './OrderRepository';
+export * from './UserOrderRepository';
 export * from './ProductRepository';

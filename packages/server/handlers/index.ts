@@ -28,4 +28,4 @@ export const Delete = createMethod('delete');
 
 import './UserHandler';
 import './ProductHandler';
-import './OrderHandler';
+import './UserOrderHandler';
