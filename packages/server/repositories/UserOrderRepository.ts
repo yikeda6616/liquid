@@ -1,7 +1,7 @@
 import { getRepository } from 'typeorm';
 import { UserOrder } from '../entities';
 
-export class OrderRepository {
+export class UserOrderRepository {
   static async create(userOrder: UserOrder) {
     await getRepository(UserOrder).insert(userOrder);
   }

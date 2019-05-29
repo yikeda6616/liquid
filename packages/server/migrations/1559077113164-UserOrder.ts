@@ -4,7 +4,7 @@ export class UserOrder1559077113164 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     await queryRunner.createTable(
       new Table({
-        name: 'userOrder',
+        name: 'user_order',
         columns: [
           {
             name: 'uid',
@@ -17,8 +17,12 @@ export class UserOrder1559077113164 implements MigrationInterface {
             isPrimary: true,
           },
           {
-            name: 'userOrderStatusId',
+            name: 'price',
             type: 'int',
+          },
+          {
+            name: 'userOrderStatus',
+            type: 'varchar',
           },
           {
             name: 'createdAt',
@@ -34,6 +38,6 @@ export class UserOrder1559077113164 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<any> {
-    await queryRunner.dropTable('userOrder');
+    await queryRunner.dropTable('user_order');
   }
 }

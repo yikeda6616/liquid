@@ -12,7 +12,7 @@ export class UserOrder {
   price: number;
 
   @Column()
-  orderStatusId: number;
+  userOrderStatus: string;
 
   @Column()
   createdAt: Date;

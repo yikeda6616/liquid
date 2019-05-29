@@ -17,7 +17,7 @@ class UserOrderHandler {
     const userOrder = new UserOrder();
     userOrder.uid = 1;
     userOrder.price = params.price;
-    userOrder.orderStatusId = 1;
+    userOrder.userOrderStatus = 'In Progress';
     userOrder.createdAt = new Date();
     userOrder.updatedAt = new Date();
     await UserOrderService.create(userOrder);

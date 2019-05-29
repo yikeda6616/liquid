@@ -1,12 +1,12 @@
-import { OrderRepository } from '../repositories';
+import { UserOrderRepository } from '../repositories';
 import { UserOrder } from '../entities';
 
 export class UserOrderService {
   static async create(userOrder: UserOrder) {
-    await OrderRepository.create(userOrder);
+    await UserOrderRepository.create(userOrder);
   }
 
   static async get(oid: string) {
-    return await OrderRepository.get(oid);
+    return await UserOrderRepository.get(oid);
   }
 }
